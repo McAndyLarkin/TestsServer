@@ -1,0 +1,28 @@
+server_api:
+
+Tests:
+	add_test: Adds test file to tests repository
+		tests/POST: : body=test.json
+
+	get_tests: Gets all test files from tests repository
+		tests/GET: ;
+
+	get_test_by_id: Gets test from tests repository with specified test_id
+		tests/GET: ; ?id=(str)
+
+	remove_test_by_id: Removes test from tests repository by specified test_id
+		tests/GET: ; ?id_to_delete=(str)
+
+
+Answers:
+	add_answer: Adds answer to answers Database
+		answers/POST: : body=answer.json
+
+	get_answers: Gets all answers from answers Database
+		answers/GET: ;
+
+	get_answer_by_test_id: Gets answer from answers Database with specified test_id
+		answers/GET: ; ?test_id=(str)
+
+	remove_answer_by_test_id: Removes answer from answers Database by specified test_id
+		answers/GET: ; ?test_id_to_delete=(str)
